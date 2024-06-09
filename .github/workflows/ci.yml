@@ -47,9 +47,11 @@ jobs:
         run: |
           mkdir ~/.local/share/godot
           mkdir ~/.local/share/godot/templates
-          
+      
+      - name: LS
+        run: ls -lah
+        
       - name: Move templates to folder
         run: mv $GODOT_TEMPLATES_FILE $GODOT_TEMPLATES_PATH
 
-      - name: LS
-        run: ls -lah
+

@@ -70,5 +70,5 @@ jobs:
       - name: Keep artefact
         uses: actions/upload-artifact@v4
         with:
-          name: game.exe
-          path: build/game.exe
+          name: GameArchive
+          path: build/*

@@ -60,5 +60,5 @@ jobs:
         run: ls -lah
         
       - name: Move templates to folder
-        run: cp -a templates/. $GODOT_TEMPLATES_PATH/$GODOT_VERSION/
+        run: mv templates ~/.local/share/godot/templates/4.2.2.stable.mono
 

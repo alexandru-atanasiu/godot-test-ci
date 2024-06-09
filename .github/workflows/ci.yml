@@ -32,6 +32,8 @@ jobs:
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v4
+    
       - name: Download Godot
         run: wget --quiet $GODOT_ARCHIVE_URL
 
@@ -58,9 +60,7 @@ jobs:
         
       - name: Move templates to folder
         run: mv templates ~/.local/share/godot/templates/4.2.2.stable.mono
-
-      - uses: actions/checkout@v4
-
+        
       - name: LS
         run: ls -lah
 

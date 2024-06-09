@@ -47,13 +47,18 @@ jobs:
       - name: Unzip Templates
         run: unzip $GODOT_TEMPLATES_FILE
 
-      - name: Create templates folder
-        run: |
-          mkdir ~/.local/share/godot
-          mkdir ~/.local/share/godot/templates
-          mkdir ~/.local/share/godot/templates/$GODOT_VERSION
-          cd ~/.local/share/godot/templates/$GODOT_VERSION
+      - name: Create ~/.local/share/godot folder
+        run: mkdir ~/.local/share/godot
       
+      - name: Create ~/.local/share/godot folder
+        run: mkdir ~/.local/share/godot
+      
+      - name: Create ~/.local/share/godot folder
+        run: mkdir ~/.local/share/godot/templates
+          
+      - name: Create ~/.local/share/godot/templates/$GODOT_VERSION folder
+        run: mkdir ~/.local/share/godot/templates/$GODOT_VERSION
+        
       - name: LS
         run: ls -lah
         

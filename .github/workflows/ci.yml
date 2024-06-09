@@ -51,9 +51,6 @@ jobs:
         run: mkdir ~/.local/share/godot
       
       - name: Create ~/.local/share/godot folder
-        run: mkdir ~/.local/share/godot
-      
-      - name: Create ~/.local/share/godot folder
         run: mkdir ~/.local/share/godot/templates
           
       - name: Create ~/.local/share/godot/templates/$GODOT_VERSION folder

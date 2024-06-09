@@ -56,7 +56,7 @@ jobs:
           mkdir /home/runner/.local/share/godot/export_templates/4.2.2.stable.mono
         
       - name: Move templates to folder
-        run: mv templates /home/runner/.local/share/godot/export_templates/4.2.2.stable.mono
+        run: mv -rp templates/* /home/runner/.local/share/godot/export_templates/4.2.2.stable.mono/
 
       - name: LS
         run: ls -lah /home/runner/.local/share/godot/export_templates/4.2.2.stable.mono/
@@ -69,9 +69,3 @@ jobs:
         with:
           name: game.exe
           path: build/game.exe
-
-      
-
-
-      
-

@@ -53,8 +53,8 @@ jobs:
       - name: Create ~/.local/share/godot folder
         run: mkdir ~/.local/share/godot/templates
           
-      - name: Create ~/.local/share/godot/templates/$GODOT_VERSION folder
-        run: mkdir ~/.local/share/godot/templates/$GODOT_VERSION
+      - name: Create ~/.local/share/godot/templates/4.2.2.stable.mono folder
+        run: mkdir ~/.local/share/godot/templates/4.2.2.stable.mono
         
       - name: LS
         run: ls -lah

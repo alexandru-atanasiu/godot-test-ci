@@ -22,8 +22,8 @@ jobs:
 
     # set env
     env:
-      GODOT_ARCHIVE_URL: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_win64.zip
-      GODOT_ARCHIVE_NAME: Godot_v4.2.2-stable_mono_win64.zip
+      GODOT_ARCHIVE_URL: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_x86_64.zip
+      GODOT_ARCHIVE_NAME: Godot_v4.2.2-stable_mono_linux_x86_64
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,7 +31,10 @@ jobs:
         run: wget $GODOT_ARCHIVE_URL
 
       - name: Unzip Godot
-        run: unzip $GODOT_ARCHIVE_NAME
+        run: unzip $GODOT_ARCHIVE_NAME.zip
+
+      - name: Run Godot Version
+        run: $GODOT_ARCHIVE_NAME/$GODOT_ARCHIVE_NAME --version
 
       - name: LS
         run: ls -lah

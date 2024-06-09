@@ -32,7 +32,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Download Godot
-        run: wget $GODOT_ARCHIVE_URL
+        run: wget --quiet $GODOT_ARCHIVE_URL
 
       - name: Unzip Godot
         run: unzip $GODOT_ARCHIVE_NAME.zip
@@ -41,7 +41,7 @@ jobs:
         run: $GODOT_ARCHIVE_NAME/$GODOT_EXECUTABLE_NAME --version
 
       - name: Download Godot Templates
-        run: wget $GODOT_TEMPLATES_URL
+        run: wget --quiet $GODOT_TEMPLATES_URL
 
       - name: Create templates folder
         run: |

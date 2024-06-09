@@ -45,8 +45,8 @@ jobs:
 
       - name: Create templates folder
         run: |
-          mkdir ~/.local/share/godot > /dev/null
-          mkdir ~/.local/share/godot/templates > /dev/null
+          mkdir ~/.local/share/godot
+          mkdir ~/.local/share/godot/templates
           
       - name: Move templates to folder
         run: mv $GODOT_TEMPLATES_FILE $GODOT_TEMPLATES_PATH

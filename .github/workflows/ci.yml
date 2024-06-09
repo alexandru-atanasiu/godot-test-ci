@@ -45,7 +45,6 @@ jobs:
 
       - name: Create templates folder
         run: |
-          mkdir ~/.local > /dev/null
           mkdir ~/.local/share > /dev/null
           mkdir ~/.local/share/godot > /dev/null
           mkdir ~/.local/share/godot/templates > /dev/null

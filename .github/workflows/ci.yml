@@ -28,4 +28,7 @@ jobs:
     steps:
       - name: Download Godot
         run: curl -o ./godot.zip $GODOT_ARCHIVE_URL
+
+      - name: Unzip Godot
+        run: unzip ./godot.zip
       

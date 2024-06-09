@@ -28,7 +28,7 @@ jobs:
       GODOT_TEMPLATES_URL: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_export_templates.tpz
       GODOT_TEMPLATES_FILE: Godot_v4.2.2-stable_mono_export_templates.tpz
       GODOT_TEMPLATES_PATH:  ~/.local/share/godot/templates/
-      GODOT_VERSION: 4.2.2
+      GODOT_VERSION: 4.2.2.stable.mono
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -51,11 +51,11 @@ jobs:
         run: |
           mkdir ~/.local/share/godot
           mkdir ~/.local/share/godot/templates
+          mkdir ~/.local/share/godot/templates/$GODOT_VERSION
       
       - name: LS
         run: ls -lah
         
       - name: Move templates to folder
-        run: mv templates $GODOT_TEMPLATES_PATH/$GODOT_VERSION.stable
-
+        run: mv templates $GODOT_TEMPLATES_PATH/$GODOT_VERSION
 

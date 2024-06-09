@@ -60,5 +60,5 @@ jobs:
         run: ls -lah
         
       - name: Move templates to folder
-        run: cp templates/* $GODOT_TEMPLATES_PATH/$GODOT_VERSION/
+        run: cp -a templates/. $GODOT_TEMPLATES_PATH/$GODOT_VERSION/
 

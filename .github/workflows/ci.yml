@@ -33,8 +33,8 @@ jobs:
       - name: Unzip Godot
         run: unzip $GODOT_ARCHIVE_NAME.zip
 
-      - name: Run Godot Version
-        run: $GODOT_ARCHIVE_NAME/$GODOT_ARCHIVE_NAME --version
-
       - name: LS
         run: ls -lah
+
+      - name: Run Godot Version
+        run: $GODOT_ARCHIVE_NAME/$GODOT_ARCHIVE_NAME --version

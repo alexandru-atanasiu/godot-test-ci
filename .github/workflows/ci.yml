@@ -56,9 +56,14 @@ jobs:
       - name: Create ~/.local/share/godot/templates/4.2.2.stable.mono folder
         run: mkdir ~/.local/share/godot/templates/4.2.2.stable.mono
         
-      - name: LS
-        run: ls -lah
-        
       - name: Move templates to folder
         run: mv templates ~/.local/share/godot/templates/4.2.2.stable.mono
+
+      - uses: actions/checkout@v4
+
+      - name: LS
+        run: ls -lah
+
+
+      
 

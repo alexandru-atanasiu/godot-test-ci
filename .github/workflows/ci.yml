@@ -28,7 +28,7 @@ jobs:
          with:
            dotnet-version: '6.0.x' # SDK Version to use.
        - name: Compile
-         run: dotnet build --configuration ${{ matrix.version }}
+         run: dotnet build --configuration ${{ matrix.cfg }}
 
   build:
     needs: code_compile

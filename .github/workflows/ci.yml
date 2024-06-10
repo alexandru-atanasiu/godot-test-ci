@@ -18,7 +18,9 @@ jobs:
   # This workflow contains a single job called "build"
   code_compile:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        cfg: [Debug, ExportDebug, ExportRelease]
     steps:
        - uses: actions/checkout@v4
 
@@ -26,7 +28,7 @@ jobs:
          with:
            dotnet-version: '6.0.x' # SDK Version to use.
        - name: Compile
-         run: dotnet build --configuration ExportRelease
+         run: dotnet build --configuration ${{ matrix.version }}
 
   build:
     needs: code_compile

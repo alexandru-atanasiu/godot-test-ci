@@ -20,9 +20,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test
-        run: echo Hello World
-  
+       - uses: actions/checkout@v4
+
+       - uses: actions/setup-dotnet@v3
+         with:
+           dotnet-version: '6.0.x' # SDK Version to use.
+       - name: Compile
+         run: dotnet build --configuration ExportRelease
+
   build:
     needs: code_compile
     
